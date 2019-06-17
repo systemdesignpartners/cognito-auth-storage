@@ -120,7 +120,7 @@ class AuthStorageIDB {
     try {
       await idbKeyval.set(key, value);
     } catch (err) {
-      console.log(`In static async setItem, while await idbKeyval.set(key=${key}, value=${value}), caught err:${err}`);
+      console.log(`IDB Error. In static async setItem, while await idbKeyval.set(key=${key}, value=${value}), caught err:${err}`);
     }
 
     return value;
@@ -151,7 +151,7 @@ class AuthStorageIDB {
       // True-up the IndexedDB store, asynchronously.
       // Fire-and-forget (no await)
       idbKeyval.delete(key).catch((err) => {
-        console.log(`In static removeItem, idbKeyval.delete(key=${key}) threw an err: ${err} Continuing.`);
+        console.log(`IDB Error. In static removeItem, idbKeyval.delete(key=${key}) threw an err: ${err} Continuing.`);
       });
     }
 
@@ -171,7 +171,7 @@ class AuthStorageIDB {
     // True-up the IndexedDB store, asynchronously.
     // Fire-and-forget (no await)
     idbKeyval.clear().catch((err) => {
-      console.log(`In static clear, idbKeyval.clear() threw an err: ${err} Continuing.`);
+      console.log(`IDB Error. In static clear, idbKeyval.clear() threw an err: ${err} Continuing.`);
     });
 
     return {};

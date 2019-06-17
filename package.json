@@ -1,6 +1,6 @@
 {
   "name": "@systemdesignpartners/cognito-auth-storage",
-  "version": "1.0.11",
+  "version": "1.0.15",
   "description": "Replace AWS Cognito default client-side storage with a custom javascript object",
   "main": "build/index.js",
   "scripts": {
