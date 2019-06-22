@@ -1,16 +1,16 @@
 {
   "name": "@systemdesignpartners/cognito-auth-storage",
-  "version": "1.0.15",
+  "version": "1.1.0",
   "description": "Replace AWS Cognito default client-side storage with a custom javascript object",
   "main": "build/index.js",
   "scripts": {
     "start": "webpack --watch",
-    "build": "webpack"
+    "build": "webpack --mode production"
   },
   "author": "System Design Partners<contact@sdpartners.com> (https://sdpartners.com)",
   "license": "MIT",
   "dependencies": {
-    "idb": "^4.0.3"
+    "idb": "4.0.3"
   },
   "homepage": "https://github.com/systemdesignpartners/cognito-auth-storage#readme",
   "repository": {
