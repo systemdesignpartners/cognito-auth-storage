@@ -39,11 +39,11 @@ delete myconfig.storage;
 ```
 to fall back to localStorage.
 
-Regardless which class you are using, make sure you set the correct storage property within the myconfig object. For instance AWS Amplify in its terminology calls S3 "Storage" but it is not that Storage that we are dealing with here. You want the one that belongs to "Auth" (which is AWS Amplify's name for Cognito). Depending on how many features of Amplify you are using, and how you set up your configuration, this may vary. For instance if you are using a myconfig file with multiple sections, i.e., containing JSON object properties such as "API," "Auth," etc., you want the ".storage" property of ".Auth".
+Regardless which class you are using, make sure you set the correct storage property within the myconfig object. For instance AWS Amplify in its terminology calls S3 "Storage" but it is not that Storage that we are dealing with here. You want the one that belongs to "Auth" (which is AWS Amplify's name for Cognito). Depending on how many features of Amplify you are using, and how you set up your configuration, this may vary. For instance if you are using a myconfig file with multiple sections, i.e., containing JSON object properties such as API, Auth, etc., you want the ".storage" property of Auth.
 
-Finally, don't forget the statement to actually use your myconfig object:
+Finally, near the end of your callback don't forget the statement to actually use your myconfig object:
 ```javascript
-Amplify.configure(amplifyConfig);
+Amplify.configure(myconfig);
 ```
 
 
