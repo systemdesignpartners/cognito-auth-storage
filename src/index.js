@@ -2,5 +2,5 @@ export { default as AuthStorageMemory } from "./AuthStorageMemory";
 export { default as AuthStorageIDB } from "./AuthStorageIDB";
 
 // To Use:
-// import {AuthStorageMemory, AuthStorageIDB} from '@systemdesignpartners/cognito-auth-storage';
+// import {AuthStorageMemory, AuthStorageIDB} from 'cognito-auth-storage';
 
